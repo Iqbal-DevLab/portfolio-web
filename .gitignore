@@ -4,7 +4,7 @@ frontend_react/build
 
 /assets
 
-frontend_react/.env
+# frontend_react/.env
 
 assets.zip
 schemas.zip
