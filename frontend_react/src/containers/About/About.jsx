@@ -37,18 +37,7 @@ const About = () => {
      
 
       <div className="app__about-context app__flex">
-        <div className="app__about-img app__flex">
-          <div className="app__flex">
-            <img
-              src={
-                aboutMe?.profileImg
-                  ? urlFor(aboutMe.profileImg)
-                  : images.aboutmine
-              }
-              alt="Profile"
-            />
-          </div>
-        </div>
+       
         <div className="app__about-data app__flex">
           <h2 className="head-text">About Me</h2>
           <p
@@ -59,6 +48,18 @@ const About = () => {
             <button className="portfolio-button" onClick={viewResumeHandler}>
               Resume
             </button>
+          </div>
+        </div>
+        <div className="app__about-img app__flex">
+          <div className="app__flex">
+            <img
+              src={
+                aboutMe?.profileImg
+                  ? urlFor(aboutMe.profileImg)
+                  : images.aboutmine
+              }
+              alt="Profile"
+            />
           </div>
         </div>
       </div>
