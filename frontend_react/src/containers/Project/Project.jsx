@@ -43,21 +43,17 @@ const Project = () => {
       </h2>
 
       <div className="app__work-filter">
-        {[
-          // "All", "ReactJS", "Web Projects", "Machine Learning", "Python"
-        ].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {["All", "React JS", "Go", "Laravel"].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
       <motion.div
         animate={animateCard}
@@ -133,7 +129,11 @@ const Project = () => {
                 {work.description}
               </p>
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                {work.tags.map((tag, index) => (
+                  <span key={index} className="p-text">
+                    {index === 0 ? tag : `, ${tag}`}
+                  </span>
+                ))}
               </div>
             </div>
           </motion.div>
