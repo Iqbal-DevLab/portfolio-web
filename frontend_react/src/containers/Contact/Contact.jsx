@@ -58,7 +58,7 @@ const Contact = () => {
         </div>
         <div className="app__contact-card">
           <img src={images.mobile} alt="mobile" />
-          <a href="tel: +62 895373441751" className="p-text">
+          <a href="wa.me/62895373441751" className="p-text">
             +62 895373441751
           </a>
         </div>
