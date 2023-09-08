@@ -58,7 +58,12 @@ const Contact = () => {
         </div>
         <div className="app__contact-card">
           <img src={images.mobile} alt="mobile" />
-          <a href="wa.me/62895373441751" className="p-text">
+          <a
+            href="https://wa.me/62895373441751"
+            className="p-text"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             +62 895373441751
           </a>
         </div>
